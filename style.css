@@ -64,7 +64,7 @@ hr {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5) ), url("./img/Copy\ of\ main.jpg") no-repeat center / cover;
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5) ), url("./img/main.jpg") no-repeat center / cover;
 }
 .intro_box {
     display: flex;
