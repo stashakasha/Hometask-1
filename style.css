@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+body {
+    line-height: 1;
+    font-family:  "Helvetica", bold;
+    --acent_text_color: #0844a4; 
+    --main_text_color: #606060;
+    background-color: #F5F7FA;
+}
+
+.main_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+h2 {
+    color: var(--acent_text_color);
+    font-size: 48px;
+    text-align: center;
+}
+
+.header, .experience, .interest, .touch  {
+    height: 100%;
+}
+
+.experience_title, .interest_title, .touch_title {
+    margin-top: 50px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    
+}
+
+.to_top {
+    display: flex;
+    justify-content: end;
+    margin: 30px;
+    font-weight: 700;
+}
+
+.to_top_title {
+    color: var(--acent_text_color);
+    font-size: 26px;
+}
+
+
+/*---------------intro-------------*/
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5) ), url("/img/Copy\ of\ main.jpg") no-repeat center / cover;
+}
+.intro_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 3px solid var(--acent_text_color);
+    height: 250px;
+    width: 700px;
+}
+h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--acent_text_color);
+    padding-top: 50px;
+}
+.intro_button, .intro_button:visited {
+    color: var(--acent_text_color);
+    height: 60px;
+    width: 180px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 15px;
+    border: 1px solid #d2d9e3;
+    border-radius: 3px;
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+    box-shadow: 3px 3px 6px gray;
+}
+.intro_button:hover {
+    background-color: var(--acent_text_color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.intro_button:active {
+    text-decoration: underline;
+}
+
+
+/*--------------header------------*/
+.header_menu_list {
+    display: flex;
+    justify-content: end;
+    list-style: none;   
+}
+.header_menu_item {
+    margin: 40px 20px;
+    padding-right: 40px;
+    border-right: 1px solid gray;
+    text-decoration: none;
+}
+.header_menu_list>:last-child {
+    border-right: none;
+}
+.header_menu_a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--acent_text_color);
+}
+.header_menu_a:hover {
+    cursor: pointer;   
+    color: #3c73ca;
+}
+.about {
+    display: flex;   
+    margin: 50px;
+    gap: 100px;
+}
+.about_img {
+    width: 300px;
+    height: 520px;   
+}
+.about_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 50px;
+    width: 700px;
+    margin-top: 30px;
+}
+.about_text {
+    max-width: 550px;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--main_text_color);   
+}
+.about_my {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;    
+}
+.about_my_item {
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+    gap: 20px;
+}
+.my_item_title {
+    color: var(--acent_text_color);
+    font-size: 26px;
+    width: 180px;
+}
+.my_item_text {
+    color: var(--main_text_color);
+    line-height: 1.3;
+}
+.about_my_item::before {
+    content: "";
+    height: 10px;
+    width: 18px;
+    border-left: 5px solid var(--main_text_color);
+    border-bottom: 5px solid var(--main_text_color);
+    transform: translateY(-50%) rotate(-45deg);
+    position: relative;
+    top: 45px;
+    right: 55px;
+}
+.about_my_item::after {
+    content: "";
+    height: 62px;
+    width: 62px;
+    border: 1px solid var(--main_text_color);
+    border-radius: 50%;
+    position: relative;
+    bottom: 190px;
+    right: 75px;
+}
+.about_my_item:first-child:after, .about_my_item:last-child:after {
+    bottom: 170px;
+}
+
+
+/*----------Experience--------*/
+.experience_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 50px;
+    margin: 100px;
+}
+.experience_container_first, .experience_container_second {
+    border: 1px solid var(--main_text_color);
+}
+.experience_container_first {
+grid-column: 1/2;
+}
+.experience_container_second {
+    grid-column: 3/4;
+}
+.experience_text {
+    color: var(--main_text_color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 10px;
+}
+.experience_terms {
+    color: var(--main_text_color);
+    padding: 15px;
+    margin-left: 20px;
+}
+p.experience_terms {
+    text-align: center;
+}
+.diagram {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: auto;
+    width: 280px;
+    height: 280px;
+    border: 3px solid black;
+    border-radius: 50%;   
+    background: conic-gradient(from -80deg, black 0 0.3%, rgb(75, 75, 255) 0 30%, black 0 30.3%, red 0 63%, black 0 63.3%, orange 0 75%, black 0 75.3%, green 0 100%);   
+}
+svg {
+    position: relative;
+    top: 16px;
+    left: 16px;
+}
+circle {  
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 3;   
+}
+.diagram_names {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    gap: 15px;   
+}
+.diagram_css, .diagram_html, .diagram_php, .diagram_js {
+    padding: 10px;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 25px;
+    min-width: 60px;
+    text-align: center;
+}
+.diagram_css {
+    background-color: rgb(75, 75, 255);
+}
+.diagram_html {
+    background-color: red;
+}
+.diagram_php {
+    background-color: orange;
+}
+.diagram_js {
+    background-color: green;
+}
+
+
+/*----------Interest's--------*/
+.interests_container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);   
+    grid-row-gap: 50px;
+}
+.interest_first_img {
+    grid-column: 1/4;
+}
+.interest_first_text {
+    grid-column: 6/9;
+}
+.interest_second_img {
+    grid-column: 7/10;
+}
+.interest_second_text {
+    grid-column: 2/5;
+    grid-row: 2/3;
+}
+.interest_first_text, .interest_second_text {
+    color: var(--main_text_color);
+    padding-top: 2em;
+    text-align: center;
+}
+.interest_first_img, .interest_second_img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+
+/*-------GetInTouch-----*/
+.touch_title_text {
+    text-align: center;
+    margin: 40px;
+    font-size: 18px;
+    color: var(--main_text_color);
+}
+.touch_form {
+    border: none;
+}
+.touch_fieldset {
+    max-height: 200px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    border: none;
+}
+.touch_message {
+    grid-column: 2/5;
+    grid-row: 1/3;
+    font-size: 18px;
+    color: var(--main_text_color);
+    resize: none;
+}
+.touch_email {   
+    grid-column: 2/3;
+    font-size: 18px;
+    color: var(--main_text_color);
+}
+.touch_name {
+    grid-column: 3/4;
+    font-size: 18px;
+    color: var(--main_text_color);
+}
+.touch_submit {
+    grid-column: 4/5;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--acent_text_color);
+}
+.touch_submit:hover {
+    background-color: #fff;
+    color: var(--acent_text_color);
+    cursor: pointer;
+    box-shadow: 3px 3px 3px var(--main_text_color);
+}
+.touch_submit:active {
+    text-decoration: underline;
+}
+.touch_message, .touch_email, .touch_name, .touch_submit {
+    border: 1px solid var(--acent_text_color);
+    padding: 15px;
+}
+::-webkit-input-placeholder{
+    font-size: 24px;
+}
+
+
+/*-------Footer------*/
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.footer_social {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin: 30px auto;
+}
+
+.social_img {
+    width: 45px;
+    height: 45px;    
+}
+.copy {
+    width: 300px;
+}
+.copy_text {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--acent_text_color);
+}
